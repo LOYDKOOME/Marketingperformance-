@@ -1,0 +1,5 @@
+{
+  "name": "Hyssop R dashboard",
+  "image": "rocker/tidyverse:4.4",
+  "postCreateCommand": "Rscript -e 'options(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os))); install.packages(c(\"shiny\",\"shinydashboard\",\"googlesheets4\",\"dplyr\",\"tidyr\",\"ggplot2\",\"DT\",\"scales\",\"rsconnect\"), repos = \"https://packagemanager.posit.co/cran/__linux__/noble/latest\", dependencies = TRUE)'"
+}

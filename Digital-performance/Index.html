@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<base target="_top">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--navy:#17365d;--blue:#1769aa;--bg:#f2f5f9;--ink:#1d2939;--muted:#667085;--line:#cbd5e1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font:15px Arial,Helvetica,sans-serif;color:var(--ink)}
+.wrap{max-width:920px;margin:25px auto;padding:0 14px}
+.head{background:var(--navy);color:#fff;padding:22px 24px;border-radius:12px 12px 0 0}
+.head h1{margin:0 0 6px;font-size:22px}.head p{margin:0;opacity:.9}
+.card{background:#fff;padding:22px;border-radius:0 0 12px 12px;box-shadow:0 5px 22px #102a4312}
+.nav{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;border-bottom:1px solid #e5e7eb;padding-bottom:12px}
+.nav a{color:var(--blue);font-weight:bold;text-decoration:none}
+h2{margin:6px 0 4px;font-size:19px}h3{margin:22px 0 6px;font-size:16px}
+.hint{font-size:13px;color:var(--muted);margin:4px 0 10px}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:7px;font:15px Arial;background:#fff}
+textarea{min-height:70px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 14px}
+table.kt{width:100%;border-collapse:collapse;margin-top:6px;font-size:14px}
+table.kt th,table.kt td{border-bottom:1px solid #e5e7eb;padding:8px 6px;text-align:left;vertical-align:middle}
+table.kt th{background:#f5f8fc;color:var(--navy);font-size:13px}
+table.kt input{padding:7px;min-width:90px}
+td.num{white-space:nowrap}
+.auto{color:#17633a;font-weight:bold}
+.none{color:var(--muted);font-style:italic}
+.covered{color:var(--muted);font-size:13px}
+.tag{display:inline-block;font-size:11px;padding:2px 6px;border-radius:4px;background:#eef4fb;color:var(--navy)}
+button{margin-top:20px;width:100%;border:0;border-radius:8px;padding:13px;background:var(--blue);color:#fff;font-weight:bold;font-size:16px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.status{display:none;margin:16px 0 0;padding:12px;border-radius:7px}
+.ok{display:block!important;background:#e8f5ec;color:#17633a}
+.err{display:block!important;background:#fff0f0;color:#a32121}
+[hidden]{display:none!important}
+@media(max-width:600px){.grid2,.grid3{grid-template-columns:1fr}.wrap{margin:10px auto}.card{padding:14px}table.kt{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>HYSSOP PROPERTIES LIMITED</h1>
+    <p>Digital Performance Management System</p>
+  </div>
+  <div class="card">
+    <div class="nav">
+      <a href="<?= baseUrl ?>?page=weekly" target="_top">1. Weekly projection</a>
+      <a href="<?= baseUrl ?>?page=leads" target="_top">2. Lead capture</a>
+      <a href="<?= baseUrl ?>?page=actuals" target="_top">3. Weekly actuals (Admin)</a>
+    </div>
+
+    <!-- ============ 1. WEEKLY PROJECTION (employee) ============ -->
+    <section id="sec-weekly" hidden>
+      <h2>Weekly projection</h2>
+      <p class="hint">Submit before the week starts. Resubmitting the same employee, area and week updates the projection.</p>
+      <div class="grid2">
+        <div><label>Employee *</label><select id="p-emp"></select></div>
+        <div><label>Reporting area *</label><select id="p-area"></select></div>
+      </div>
+      <label>Week starting (Monday) *</label>
+      <input type="date" id="p-week">
+      <div class="grid3">
+        <div><label>Posts planned *</label><input type="number" id="p-posts" min="0" step="1"></div>
+        <div><label>Expected leads *</label><input type="number" id="p-leads" min="0" step="1"><div class="hint" id="p-leads-hint"></div></div>
+        <div><label>Expected conversions (sales) *</label><input type="number" id="p-conv" min="0" step="1"></div>
+      </div>
+      <h3>Planned KPI deliverables for the week</h3>
+      <p class="hint">Weekly commitments are pre-filled from the approved monthly targets. Change them to what you actually plan to deliver.</p>
+      <table class="kt">
+        <thead><tr><th>KPI</th><th>Unit</th><th>Monthly target</th><th>Weekly commitment</th></tr></thead>
+        <tbody id="p-kpis"></tbody>
+      </table>
+      <label>Actions planned for the week</label>
+      <textarea id="p-actions"></textarea>
+      <label>Support or dependencies needed</label>
+      <textarea id="p-support"></textarea>
+      <label>Evidence or tracking link (optional)</label>
+      <input type="url" id="p-evidence">
+      <button id="p-submit">Submit weekly projection</button>
+    </section>
+
+    <!-- ============ 2. LEAD CAPTURE ============ -->
+    <section id="sec-leads" hidden>
+      <h2>Lead capture</h2>
+      <p class="hint">Record every enquiry the day it comes in. Phone numbers are restricted and used only to detect duplicates.</p>
+      <div class="grid2">
+        <div><label>Lead date *</label><input type="date" id="l-date"></div>
+        <div><label>Lead name or ID *</label><input id="l-name"></div>
+      </div>
+      <div class="grid2">
+        <div><label>Phone (for duplicate check)</label><input id="l-phone" type="tel"></div>
+        <div><label>Lead source *</label><select id="l-source"></select></div>
+      </div>
+      <label>Campaign or tracked link</label>
+      <input id="l-campaign" placeholder="e.g. Meta Ads April set 2">
+      <div class="grid2">
+        <div><label>Assigned agent *</label><select id="l-agent"></select></div>
+        <div><label>Captured by *</label><select id="l-by"></select></div>
+      </div>
+      <div class="grid3">
+        <div><label>Qualified? *</label>
+          <select id="l-qual"><option>Pending</option><option>Qualified</option><option>Not qualified</option></select></div>
+        <div><label>Contacted within 15 minutes? *</label>
+          <select id="l-contact"><option>Unknown</option><option>Yes</option><option>No</option></select></div>
+        <div><label>Handed to agent within 15 minutes? *</label>
+          <select id="l-handoff"><option>Unknown</option><option>Yes</option><option>No</option></select></div>
+      </div>
+      <div class="grid3">
+        <div><label>Site visit status *</label>
+          <select id="l-visit"><option>Not booked</option><option>Booked</option><option>Completed</option><option>Cancelled</option></select></div>
+        <div><label>Sale status *</label>
+          <select id="l-sale"><option>Open</option><option>Follow-up</option><option>Won</option><option>Lost</option></select></div>
+        <div><label>Plots sold *</label><input type="number" id="l-plots" min="0" step="1" value="0"></div>
+      </div>
+      <label>Sale value (KES), if Won</label>
+      <input type="number" id="l-value" min="0" step="1" value="0">
+      <label>Notes</label>
+      <textarea id="l-notes"></textarea>
+      <button id="l-submit">Save lead</button>
+    </section>
+
+    <!-- ============ 3. WEEKLY ACTUALS (administrator) ============ -->
+    <section id="sec-actuals" hidden>
+      <h2>Weekly actual performance (Administrator)</h2>
+      <p class="hint">Complete at the end of the week, after checking the evidence. Lead-based KPIs calculate automatically from the lead register and are shown in green. Enter everything else from the platform reports.</p>
+      <div class="grid2">
+        <div><label>Employee *</label><select id="a-emp"></select></div>
+        <div><label>Reporting area *</label><select id="a-area"></select></div>
+      </div>
+      <label>Week starting (Monday) *</label>
+      <input type="date" id="a-week">
+      <table class="kt">
+        <thead><tr><th>KPI</th><th>Unit</th><th>Monthly target</th><th>Weekly commitment</th><th>Actual</th></tr></thead>
+        <tbody id="a-kpis"></tbody>
+      </table>
+      <label>Evidence link or screenshot reference</label>
+      <input type="url" id="a-evidence">
+      <label>Administrator notes</label>
+      <textarea id="a-notes"></textarea>
+      <label style="font-weight:normal"><input type="checkbox" id="a-checked" style="width:auto"> I checked the evidence for this employee and week</label>
+      <button id="a-submit">Save weekly actuals</button>
+    </section>
+
+    <div id="status" class="status" role="status"></div>
+  </div>
+</div>
+
+<script>
+const PAGE = "<?= page ?>";
+const PEOPLE = <?!= peopleJson ?>;
+const SOURCES = <?!= sourcesJson ?>;
+const AGENTS = <?!= agentsJson ?>;
+const IS_ADMIN = <?!= isAdmin ?>;
+
+const $ = id => document.getElementById(id);
+const td = (text, cls) => { const c = document.createElement("td"); if (cls) c.className = cls; c.textContent = text; return c; };
+const shown = v => (v === null || v === undefined || v === "") ? "" : v;
+
+function isoDate(d) {
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+function mondayOf(d) {
+  const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  x.setDate(x.getDate() - ((x.getDay() + 6) % 7));
+  return x;
+}
+function nextMonday() { const m = mondayOf(new Date()); if (new Date().getDay() !== 1) m.setDate(m.getDate() + 7); return m; }
+
+function fillSelect(sel, list, placeholder) {
+  sel.innerHTML = "";
+  if (placeholder) sel.add(new Option(placeholder, ""));
+  list.forEach(v => sel.add(new Option(v, v)));
+}
+function fillAreas(empSel, areaSel) {
+  areaSel.innerHTML = "";
+  (PEOPLE[empSel.value] || []).forEach(a => areaSel.add(new Option(a, a)));
+}
+function status(msg, ok) {
+  const s = $("status");
+  s.textContent = msg;
+  s.className = "status " + (ok ? "ok" : "err");
+  window.scrollTo(0, 0);
+}
+function fail(err, btn, label) {
+  status((err && err.message) ? err.message : String(err), false);
+  if (btn) { btn.disabled = false; btn.textContent = label; }
+}
+function collect(sel) {
+  const out = {};
+  document.querySelectorAll(sel + " input[data-kpi]").forEach(i => { if (i.value !== "") out[i.dataset.kpi] = i.value; });
+  return out;
+}
+
+/* ---------- 1. Weekly projection ---------- */
+if (PAGE === "weekly") {
+  $("sec-weekly").hidden = false;
+  fillSelect($("p-emp"), Object.keys(PEOPLE), "Select");
+  $("p-emp").addEventListener("change", () => { fillAreas($("p-emp"), $("p-area")); loadProjection(); });
+  $("p-area").addEventListener("change", loadProjection);
+  $("p-week").addEventListener("change", loadProjection);
+  $("p-week").value = isoDate(nextMonday());
+  $("p-submit").addEventListener("click", submitProjection);
+}
+
+function loadProjection() {
+  const emp = $("p-emp").value, area = $("p-area").value, wk = $("p-week").value;
+  if (!emp || !area || !wk) return;
+  $("p-kpis").innerHTML = "";
+  $("p-kpis").appendChild(td("Loading KPIs...", "none"));
+  google.script.run.withSuccessHandler(renderProjection).withFailureHandler(e => fail(e)).getProjectionTemplate(emp, area, wk);
+}
+
+function renderProjection(t) {
+  $("p-posts").value = shown(t.posts);
+  $("p-leads").value = shown(t.expectedLeads);
+  $("p-conv").value = shown(t.expectedConversions);
+  $("p-leads-hint").textContent = t.scorecard === "Marketing Coordinator"
+    ? "For the Marketing Coordinator this means expected influencer leads."
+    : "Counts toward the leads KPI automatically.";
+  const tb = $("p-kpis");
+  tb.innerHTML = "";
+  t.rows.forEach(r => {
+    const tr = document.createElement("tr");
+    tr.appendChild(td(r.kpi));
+    tr.appendChild(td(r.unit, "num"));
+    tr.appendChild(td(shown(r.monthlyTarget), "num"));
+    const c = document.createElement("td");
+    if (r.covered) {
+      c.className = "covered";
+      c.textContent = "Uses Expected leads above";
+    } else {
+      const i = document.createElement("input");
+      i.type = "number"; i.step = "any"; i.min = "0"; i.dataset.kpi = r.kpi;
+      i.value = shown(r.saved !== null ? r.saved : r.suggested);
+      c.appendChild(i);
+    }
+    tr.appendChild(c);
+    tb.appendChild(tr);
+  });
+}
+
+function submitProjection() {
+  const b = $("p-submit");
+  b.disabled = true; b.textContent = "Saving...";
+  const payload = {
+    employee: $("p-emp").value, reportingArea: $("p-area").value, weekStarting: $("p-week").value,
+    posts: $("p-posts").value, expectedLeads: $("p-leads").value, expectedConversions: $("p-conv").value,
+    actions: $("p-actions").value, support: $("p-support").value, evidence: $("p-evidence").value,
+    kpis: collect("#p-kpis")
+  };
+  google.script.run
+    .withSuccessHandler(r => { status(r.message, true); b.disabled = false; b.textContent = "Submit weekly projection"; $("p-actions").value = ""; $("p-support").value = ""; loadProjection(); })
+    .withFailureHandler(e => fail(e, b, "Submit weekly projection"))
+    .submitWeeklyPlan(payload);
+}
+
+/* ---------- 2. Lead capture ---------- */
+if (PAGE === "leads") {
+  $("sec-leads").hidden = false;
+  fillSelect($("l-source"), SOURCES, "Select source");
+  fillSelect($("l-agent"), AGENTS, "Select agent");
+  fillSelect($("l-by"), Object.keys(PEOPLE), "Select");
+  $("l-date").value = isoDate(new Date());
+  $("l-submit").addEventListener("click", submitLead);
+}
+
+function submitLead() {
+  const b = $("l-submit");
+  const need = [["l-date", "Lead date"], ["l-name", "Lead name or ID"], ["l-source", "Lead source"], ["l-agent", "Assigned agent"], ["l-by", "Captured by"]];
+  for (const [id, label] of need) { if (!$(id).value) { status(label + " is required.", false); $(id).focus(); return; } }
+  b.disabled = true; b.textContent = "Saving...";
+  const payload = {
+    leadDate: $("l-date").value, leadName: $("l-name").value, phone: $("l-phone").value,
+    source: $("l-source").value, campaign: $("l-campaign").value,
+    assignedAgent: $("l-agent").value, enteredBy: $("l-by").value,
+    qualified: $("l-qual").value, contacted: $("l-contact").value, handoff: $("l-handoff").value,
+    siteVisit: $("l-visit").value, saleStatus: $("l-sale").value,
+    plotsSold: $("l-plots").value, saleValue: $("l-value").value, notes: $("l-notes").value
+  };
+  google.script.run
+    .withSuccessHandler(r => {
+      status(r.message, true); b.disabled = false; b.textContent = "Save lead";
+      ["l-name", "l-phone", "l-campaign", "l-notes"].forEach(id => $(id).value = "");
+      $("l-plots").value = "0"; $("l-value").value = "0";
+    })
+    .withFailureHandler(e => fail(e, b, "Save lead"))
+    .submitLead(payload);
+}
+
+/* ---------- 3. Weekly actuals (administrator) ---------- */
+if (PAGE === "actuals" && IS_ADMIN) {
+  $("sec-actuals").hidden = false;
+  fillSelect($("a-emp"), Object.keys(PEOPLE), "Select");
+  $("a-emp").addEventListener("change", () => { fillAreas($("a-emp"), $("a-area")); loadActuals(); });
+  $("a-area").addEventListener("change", loadActuals);
+  $("a-week").addEventListener("change", loadActuals);
+  $("a-week").value = isoDate(mondayOf(new Date()));
+  $("a-submit").addEventListener("click", submitActuals);
+}
+
+function loadActuals() {
+  const emp = $("a-emp").value, area = $("a-area").value, wk = $("a-week").value;
+  if (!emp || !area || !wk) return;
+  $("a-kpis").innerHTML = "";
+  $("a-kpis").appendChild(td("Loading KPIs...", "none"));
+  google.script.run.withSuccessHandler(renderActuals).withFailureHandler(e => fail(e)).getActualsTemplate(emp, area, wk);
+}
+
+function renderActuals(t) {
+  const tb = $("a-kpis");
+  tb.innerHTML = "";
+  t.rows.forEach(r => {
+    const tr = document.createElement("tr");
+    const nameCell = td(r.name);
+    if (r.auto) { const tag = document.createElement("span"); tag.className = "tag"; tag.textContent = "auto"; nameCell.appendChild(document.createTextNode(" ")); nameCell.appendChild(tag); }
+    tr.appendChild(nameCell);
+    tr.appendChild(td(r.unit, "num"));
+    tr.appendChild(td(shown(r.monthlyTarget), "num"));
+    tr.appendChild(td(shown(r.committed), "num"));
+    const c = document.createElement("td");
+    if (r.auto) {
+      if (r.live === null) { c.className = "none"; c.textContent = "no data"; }
+      else { c.className = "auto"; c.textContent = r.live; }
+    } else {
+      const i = document.createElement("input");
+      i.type = "number"; i.step = "any"; i.min = "0"; i.dataset.kpi = r.name;
+      i.value = shown(r.saved);
+      if (r.unit === "%") i.max = "100";
+      c.appendChild(i);
+    }
+    tr.appendChild(c);
+    tb.appendChild(tr);
+  });
+}
+
+function submitActuals() {
+  const b = $("a-submit");
+  b.disabled = true; b.textContent = "Saving...";
+  const payload = {
+    employee: $("a-emp").value, reportingArea: $("a-area").value, weekStarting: $("a-week").value,
+    values: collect("#a-kpis"), evidence: $("a-evidence").value, notes: $("a-notes").value,
+    evidenceChecked: $("a-checked").checked
+  };
+  google.script.run
+    .withSuccessHandler(r => { status(r.message, true); b.disabled = false; b.textContent = "Save weekly actuals"; loadActuals(); })
+    .withFailureHandler(e => fail(e, b, "Save weekly actuals"))
+    .submitActual(payload);
+}
+
+if (PAGE === "actuals" && !IS_ADMIN) status("Administrator access only.", false);
+</script>
+</body>
+</html>

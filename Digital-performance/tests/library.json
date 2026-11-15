@@ -1,0 +1,432 @@
+[
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Leads",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 8.0,
+  "Month 3 Approved Target": 12.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Site visits",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1.0,
+  "Month 2 Approved Target": 2.0,
+  "Month 3 Approved Target": 3.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "New followers",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 600.0,
+  "Month 2 Approved Target": 600.0,
+  "Month 3 Approved Target": 600.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Videos above 10k views",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1.0,
+  "Month 2 Approved Target": 2.0,
+  "Month 3 Approved Target": 2.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Engagement rate",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 4.5,
+  "Month 3 Approved Target": 5.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Videos posted",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 16.0,
+  "Month 2 Approved Target": 16.0,
+  "Month 3 Approved Target": 20.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "TikTok live sessions",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 8.0,
+  "Month 3 Approved Target": 16.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Faith",
+  "KPI": "Comment reply time",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 2.0,
+  "Month 2 Approved Target": 2.0,
+  "Month 3 Approved Target": 1.0,
+  "Unit": "hours",
+  "Scoring Direction": "Lower is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "Leads",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 8.0,
+  "Month 3 Approved Target": 12.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "Site visits",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1.0,
+  "Month 2 Approved Target": 2.0,
+  "Month 3 Approved Target": 3.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "New followers",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 250.0,
+  "Month 2 Approved Target": 250.0,
+  "Month 3 Approved Target": 300.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "Reach growth",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 2500.0,
+  "Month 2 Approved Target": 5000.0,
+  "Month 3 Approved Target": 10000.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "Engagement rate",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 2.5,
+  "Month 2 Approved Target": 3.0,
+  "Month 3 Approved Target": 3.5,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Chege",
+  "KPI": "DM reply time",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 2.0,
+  "Month 2 Approved Target": 1.0,
+  "Month 3 Approved Target": 1.0,
+  "Unit": "hours",
+  "Scoring Direction": "Lower is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Organic leads",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 10.0,
+  "Month 2 Approved Target": 15.0,
+  "Month 3 Approved Target": 20.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Site visits",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 2.0,
+  "Month 2 Approved Target": 4.0,
+  "Month 3 Approved Target": 6.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "New followers",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 200.0,
+  "Month 2 Approved Target": 200.0,
+  "Month 3 Approved Target": 200.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Engagement rate",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1.5,
+  "Month 2 Approved Target": 2.0,
+  "Month 3 Approved Target": 2.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Posts per week",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 5.0,
+  "Month 2 Approved Target": 5.0,
+  "Month 3 Approved Target": 5.0,
+  "Unit": "per week",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Local groups posted daily",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 5.0,
+  "Month 2 Approved Target": 10.0,
+  "Month 3 Approved Target": 10.0,
+  "Unit": "per day",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Collaboration posts",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 12.0,
+  "Month 2 Approved Target": 12.0,
+  "Month 3 Approved Target": 12.0,
+  "Unit": "per month",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Derrick",
+  "KPI": "Facebook live sessions",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 8.0,
+  "Month 3 Approved Target": 10.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Ads",
+  "KPI": "Leads",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 600.0,
+  "Month 2 Approved Target": 1200.0,
+  "Month 3 Approved Target": 2000.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Ads",
+  "KPI": "Qualified leads (%)",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 40.0,
+  "Month 2 Approved Target": 50.0,
+  "Month 3 Approved Target": 60.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Ads",
+  "KPI": "Contacted within 15 min (%)",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 95.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Ads",
+  "KPI": "Site visits",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 100.0,
+  "Month 2 Approved Target": 150.0,
+  "Month 3 Approved Target": 300.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Ads",
+  "KPI": "Cost per qualified lead",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 350.0,
+  "Month 2 Approved Target": 300.0,
+  "Month 3 Approved Target": 250.0,
+  "Unit": "KES",
+  "Scoring Direction": "Lower is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Website",
+  "KPI": "Leads",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 5.0,
+  "Month 2 Approved Target": 10.0,
+  "Month 3 Approved Target": 20.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Website",
+  "KPI": "Website visitors",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1000.0,
+  "Month 2 Approved Target": 1500.0,
+  "Month 3 Approved Target": 2000.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Website",
+  "KPI": "Visitor-to-enquiry rate (%)",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 1.0,
+  "Month 2 Approved Target": 1.5,
+  "Month 3 Approved Target": 2.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Dan - Website",
+  "KPI": "Blog posts",
+  "Category": "Digital team",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 4.0,
+  "Month 3 Approved Target": 4.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Leads logged with source (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 100.0,
+  "Month 2 Approved Target": 100.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Leads handed to agent within 15 min (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 95.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Campaigns launched on schedule (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 95.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Content calendar followed (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 95.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Influencer posts delivered on schedule (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 100.0,
+  "Month 2 Approved Target": 100.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Influencers with tracked contact (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 100.0,
+  "Month 2 Approved Target": 100.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Influencer shoots coordinated",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 6.0,
+  "Month 3 Approved Target": 8.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Influencer leads",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 5.0,
+  "Month 2 Approved Target": 7.0,
+  "Month 3 Approved Target": 10.0,
+  "Unit": "count",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Brand-guideline compliance (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 95.0,
+  "Month 3 Approved Target": 95.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Asset library updated within 48 hrs (%)",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 90.0,
+  "Month 2 Approved Target": 100.0,
+  "Month 3 Approved Target": 100.0,
+  "Unit": "%",
+  "Scoring Direction": "Higher is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Outdated materials in circulation",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 0.0,
+  "Month 2 Approved Target": 0.0,
+  "Month 3 Approved Target": 0.0,
+  "Unit": "count",
+  "Scoring Direction": "Lower is better"
+ },
+ {
+  "Employee / Reporting Area": "Marketing Coordinator",
+  "KPI": "Weekly reports delivered on time",
+  "Category": "Marketing Coordinator",
+  "Month 1 Approved Target": 4.0,
+  "Month 2 Approved Target": 4.0,
+  "Month 3 Approved Target": 4.0,
+  "Unit": "reports",
+  "Scoring Direction": "Higher is better"
+ }
+]
